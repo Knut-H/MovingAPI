@@ -7,3 +7,5 @@
 /.vs/MovingAPI/v16
 /obj
 /.vs/MovingAPI/DesignTimeBuild
+/.vs/MovingAPI/config/applicationhost.config
+/bin/Debug/netcoreapp3.1
