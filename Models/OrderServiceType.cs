@@ -5,11 +5,9 @@ using System.Threading.Tasks;
 
 namespace MovingAPI.Models
 {
-    public class ServiceType
+    public class OrderServiceType
     {
+        public int OrderID { get; set; }
         public int ServiceTypeID { get; set; }
-        public string Name { get; set; }
-
-        public ICollection<OrderServiceType> OrderServices { get; set; }
     }
 }
