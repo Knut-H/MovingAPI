@@ -25,9 +25,8 @@ namespace MovingAPI.Data
             modelBuilder.Entity<Customer>().ToTable("Customer");
             modelBuilder.Entity<Order>().ToTable("Order");
             modelBuilder.Entity<ServiceType>().ToTable("ServiceType");
-            modelBuilder.Entity<OrderServiceType>()
-                .HasKey(o => new { o.OrderID, o.ServiceTypeID });
-            modelBuilder.Entity<OrderServiceType>().ToTable("OrderServiceType");
+            modelBuilder.Entity<OrderServiceType>().ToTable("OrderServiceType")
+                .HasKey(k => new { k.OrderID, k.ServiceTypeID });
         }
     }
 }
