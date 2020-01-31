@@ -12,6 +12,8 @@ namespace MovingAPI.Models
         public string FirstName { get; set; }
         public int PhoneNr { get; set; }
         public string Email { get; set; }
+
+        //Foreign key and data structures
         public ICollection<Order> Orders { get; set; }
     }
 }
