@@ -31,7 +31,8 @@ namespace MovingAPI
                 try
                 {
                     var context = services.GetRequiredService<MovingContext>();
-                    context.Database.EnsureCreated();
+                    //context.Database.EnsureCreated();
+                    DbInitializer.Initialize(context);
                 }
                 catch (Exception ex)
                 {
