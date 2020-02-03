@@ -8,6 +8,8 @@ namespace MovingAPI.Models
     public class OrderServiceType
     {
         public int OrderID { get; set; }
+        public Order Order { get; set; }
         public int ServiceTypeID { get; set; }
+        public ServiceType ServiceType { get; set; }
     }
 }
