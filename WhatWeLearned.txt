@@ -1,0 +1,12 @@
+
+Error with JSON trying to send an object with an Include
+JsonException: A possible object cycle was detected which is not supported. This can either be due to a 
+cycle or if the object depth is larger than the maximum allowed depth of 32.
+System.Text.Json.ThrowHelper.ThrowInvalidOperationException_SerializerCycleDetected(int maxDepth)
+
+This was solved by installing a new NuGet package
+Microsoft.AspNetCore.Mvc.NewtonsoftJson
+as well as adding it as a service in the startup file.
+
+Thsi solutin was found at 
+https://stackoverflow.com/questions/57912012/net-core-3-upgrade-cors-and-jsoncycle-xmlhttprequest-error
