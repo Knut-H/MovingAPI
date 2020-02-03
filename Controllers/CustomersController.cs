@@ -26,7 +26,9 @@ namespace MovingAPI.Controllers
         public async Task<ActionResult<IEnumerable<Customer>>> GetCustomers()
         {
             return await _context.Customers
-                .Include(o => o.Orders)
+                .Include(c => c.Orders)
+                .ThenInclude(o => o.OrderServices)
+                .ThenInclude(ost => ost.ServiceType)
                 .ToListAsync();
         }
 
