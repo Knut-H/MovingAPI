@@ -28,10 +28,10 @@ namespace MovingAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
-            services.AddMvc(option => option.EnableEndpointRouting = false)
-                .SetCompatibilityVersion(CompatibilityVersion.Version_3_0)
-                .AddNewtonsoftJson(opt => opt.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);
+            services.AddControllers().AddNewtonsoftJson(x => x.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore); ;
+            //services.AddMvc(option => option.EnableEndpointRouting = false)
+                //.SetCompatibilityVersion(CompatibilityVersion.Version_3_0)
+                //.AddNewtonsoftJson(opt => opt.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);
             services.AddDbContext<MovingContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("MovingContext")));
         }
