@@ -15,3 +15,6 @@ https://stackoverflow.com/questions/57912012/net-core-3-upgrade-cors-and-jsoncyc
 
 Failure attempting to include servicetypes in customersController:
 	Forgot to add navigation properties (class references) in orderServiceType
+
+Failure to load resources from another localhost server
+	Cors policy must be set up in startup.cs to specifically allow other domains, including localhost, to request resources like the json api.
