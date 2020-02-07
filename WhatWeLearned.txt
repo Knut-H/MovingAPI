@@ -8,5 +8,13 @@ This was solved by installing a new NuGet package
 Microsoft.AspNetCore.Mvc.NewtonsoftJson
 as well as adding it as a service in the startup file.
 
-Thsi solutin was found at 
+This solution was found at 
 https://stackoverflow.com/questions/57912012/net-core-3-upgrade-cors-and-jsoncycle-xmlhttprequest-error
+
+
+
+Failure attempting to include servicetypes in customersController:
+	Forgot to add navigation properties (class references) in orderServiceType
+
+Failure to load resources from another localhost server
+	Cors policy must be set up in startup.cs to specifically allow other domains, including localhost, to request resources like the json api.

@@ -49,12 +49,24 @@ namespace MovingAPI.Data
 
             var order = new Order[]
             {
-                new Order{ CustomerID=2, DateOfService= new DateTime(2020,4,4), FromAddress="Testveien 4", ToAddress="Testveien 3", OrderServices= new OrderServiceType[]{ new OrderServiceType { OrderID=1, ServiceTypeID=2, }  } }
+                new Order{ CustomerID=2, DateOfService= new DateTime(2020,4,4), FromAddress="Testveien 4", ToAddress="Testveien 3" }
             };
 
             foreach (Order o in order)
             {
                 context.Orders.Add(o);
+            }
+
+            context.SaveChanges();
+
+            var orderServices = new OrderServiceType[]
+            {
+                new OrderServiceType{ OrderID=1, ServiceTypeID=2}
+            };
+
+            foreach (OrderServiceType ost in orderServices)
+            {
+                context.OrderServiceTypes.Add(ost);
             }
 
             context.SaveChanges();
